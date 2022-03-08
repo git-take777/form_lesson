@@ -30,9 +30,97 @@
             <!--
               ここに続きのHTMLを書いていきましょう
             -->
-            <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title></title>
+            </head>
+            <body>
+              <div class="form-inner">
+                <!-- 名字・名前 -->
+                <div class="common_question_space">
+                  <div class="name-line">
+                    <div class="name_input is-half_width">
+                      <p class="command-required">名字</p>
+                      <input id="lastname" name="last_name" class="common-input_area input-init required type="text"><!-- 名前 -->
+                    </div><!-- /.name_input -->
+                    <div class="name_input is-half_width">
+                      <p class="command-required">名前</p>
+                      <input id="firstname" name="first_name" class="common-input_area input-init" required type="text">
+                    </div><!-- /.name_input -->
+                  </div><!-- /.name-line -->
+                </div>
+                <div class="common_question_space">
+                  <p class="command-required">性別</p>
+                  <div class="gender-input-wrap">
+                    <label class="gender-content" for="male">
+                      <input class="common-gender_input" type="radio" value="male" name="gender" id="male">
+                      <span>男性</span>
+                    </label>
+                    <label class="gender-content" for="female">
+                      <input class="common-gender_input" type="radio"  value="female" name="gender" id="female">
+                      <span>女性</span>
+                    </label>
+                    <label class="gender-content" for="other">
+                      <input class="common-gender_input" type="radio"  value="other" name="gender" id="other"><span>カスタム</span>
+                    </label>
+                  </div><!-- /.gender-input-wrap -->
+                </div>
+                <!-- 出身 -->
+               <!-- <div class="common_question"> -->
+                <div class="common_question_space">  
+                  <p class="command-required">出身</p>
+                    <select name="birthplace" id="birthplace" class="birthplace common-input_area input-init is-half_width">
+                      <option value="東京">東京</option>
+                      <option value="千葉">千葉</option>
+                      <option value="埼玉">埼玉</option>
+                      <option value="神奈川">神奈川</option>
+                    </select><!-- /# -->
+                  <!-- </div> -->
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space">
+                  <p class="command-required">Eメール</p>
+                  <div><input id="e-mail" name="email" class="common-input_area input-init" placeholder="ex) hoge@example.com" required type="email"></div><!-- 電話番号 -->
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space">
+                  <p class="command-required">電話番号</p>
+                  <div><input id="tel" class="common-input_area input-init" placeholder="ex) 090-1234-5678" type="tel"></div><!-- PassWord -->
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space">
+                  <p class="command-required">パスワード</p>
+                  <input type="password" id="password" name="password" class="common-input_area input-init required type="password"><!-- パスワード(確認用) -->
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space">
+                  <p class="command-required">パスワード(確認用)</p>
+                  <input type="password" id="repassword" name="repassword" class="demo common-input_area input-init required type="password"><!-- 備考 -->
+                </div><!-- /.common_question_space -->
+              </div>
+                <div class="common_question_space">
+                  <p class="command-required">希望コース</p>
+                  <div class="cource-option">
+                    <input id="frontend" class="selected-course" type="checkbox">
+                    <label class="cource-option-text" for="frontend">フロントエンド</label>
+                  </div>
+                  <div class="cource-option"> 
+                    <input id="backend" class="selected-course" type="checkbox">
+                    <label class="cource-option-text" for="backend">バックエンド</label>
+                  </div>
+                  <div class="cource-option">
+                    <input id="app" class="selected-course" type="checkbox">
+                    <label class="cource-option-text" for="app">アプリ</label>
+                  </div>
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space remarks">
+                  <p class="command-required">備考</p>
+                  <textarea id="sub-info" class="common-input_area input-init" placeholder="何かあれば記入してください"></textarea>
+                </div><!-- /.common_question_space -->
+                <div class="common_question_space submit-wrap">
+                  <input class="submit-width button submit-btn submit-bg" type="submit" value="アカウント作成">
+                </div>
+                <p class="agreement">アカウントを作成することにより、<a class="link-color" href="">利用規約</a>と<a class="link-color" href="">プライバシーポリシー</a>に同意するものとします。</p>
+            </div><!-- /.form-inner -->
           </form>
-        </div>
+        
         <div class="foot-part">
           <p>すでにアカウントをお持ちですか？ <a class="link-color" href>ログイン</a></p>
           <a class="link-color resend-mail" href>認証メールが届きませんか？</a>
